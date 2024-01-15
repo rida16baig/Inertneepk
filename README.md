@@ -1,2 +1,2 @@
-# CODSOFT
-A repository for all CODSOFT's internship projects
+# Interneepk
+A repository for all Internee.pk's internship projects
