@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Contact Form JavaScript Validation</title>
+  </head>
+  <body>
+    <main>
+      <form action="#" method="post" autocomplete="on" id="form">
+        <div id="success-message" class="success-message"></div>
+        <h1>Contact Form</h1>
+        <div class="form-box">
+          <label for="username">Name <span class="red">*</span></label>
+          <input
+            type="text"
+            id="username"
+            autocomplete="name"
+            inputmode="text"
+            maxlength="40"
+          />
+          <div class="error"></div>
+        </div>
+        <div class="form-box">
+          <label for="email">Email <span class="red">*</span></label>
+          <input
+            type="email"
+            id="email"
+            autocomplete="email"
+            inputmode="email"
+          />
+          <div class="error"></div>
+        </div>
+        <div class="form-box">
+          <label for="phone">Phone Number <span class="red">*</span></label>
+          <input
+            type="tel"
+            id="phone"
+            autocomplete="tel"
+            inputmode="tel"
+            minlength="8"
+            maxlength="11"
+          />
+          <div class="error"></div>
+        </div>
+        <div class="form-box">
+          <label for="subject">Subject <span class="red">*</span></label>
+          <input type="text" id="subject" />
+          <div class="error"></div>
+        </div>
+        <div class="form-box">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="5"></textarea>
+        </div>
+        <div class="form-box">
+          <input type="submit" value="Submit" class="submit" />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
