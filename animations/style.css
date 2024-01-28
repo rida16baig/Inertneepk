@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Lato&family=League+Spartan:wght@200;700&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --aqua-color: aqua;
+  --font-size-normal: 1.4rem;
+  --font-size-medium: 2rem;
+  --font-size-large: 3rem;
+
+  --gutter-large: 11rem;
+  --gutter-small: 4.5rem;
+  --gutter-normal: 7rem;
+
+  --border-radius-round: 50%;
+  --border-radius-medium: 1.8rem;
+}
+body {
+  font-size: 62.5%;
+  font-family: "roboto", sans-serif;
+  background-color: var(--black-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--aqua-color);
+  gap: var(--gutter-normal);
+}
+h1{
+  font-size: var(--font-size-large);
+  text-shadow: 0 0 4px var(--aqua-color);
+}
+main {
+  max-width: 600px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gutter-small);
+}
+button {
+  font-size: var(--font-size-normal);
+  width: var(--gutter-large);
+  height: var(--gutter-small);
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+/* styling button no. 1  */
+
+button.btn1 {
+  border: 2px solid var(--aqua-color);
+  transition: all 0.5s ease-in-out;
+  background-color: var(--aqua-color);
+  color: black;
+  box-shadow: 0 0 5px var(--aqua-color);
+  border-radius: var(--border-radius-medium);
+}
+
+button.btn1:hover {
+  color: var(--white-color);
+  background-color: transparent;
+}
+/* styling button no. 3  */
+
+button.btn3 {
+  background-color: transparent;
+  color: var(--white-color);
+  border: 2px solid var(--aqua-color);
+  position: relative;
+  z-index: 1;
+}
+
+button.btn3:before {
+  content: "";
+  position: absolute;
+  background-color: var(--aqua-color);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: transform 200ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+button.btn3:hover:before {
+  transform: scaleX(1);
+}
+
+button.btn3:hover {
+  color: var(--black-color);
+}
+/* styling button no. 2 */
+
+button.btn2 {
+  background-color: transparent;
+  color: var(--white-color);
+  border: 2px solid var(--aqua-color);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+button.btn2::before {
+  content: "";
+  position: absolute;
+  background-color: var(--aqua-color);
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: -30%;
+  z-index: -1;
+  transform: skew(35deg);
+  transition: all 0.5s ease-in-out;
+}
+button.btn2:hover::before {
+  width: 100%;
+}
+button.btn2:hover {
+  box-shadow: 0 0 5px var(--aqua-color);
+}
+/* styling button no. 4 */
+
+button.btn4 {
+  background-color: transparent;
+  color: var(--white-color);
+  border: 2px solid var(--aqua-color);
+  position: relative;
+  z-index: 1;
+}
+
+button.btn4:before {
+  content: "";
+  position: absolute;
+  background-color: var(--aqua-color);
+  width: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+  height: 100%;
+  z-index: -1;
+}
+
+button.btn4:hover:before {
+  width: 100%;
+}
+
+button.btn4:hover {
+  color: var(--black-color);
+}
+/* styling button no. 5 */
+
+button.btn5 {
+  background-color: transparent;
+  color: var(--white-color);
+  border: none;
+  border-bottom: 2px solid var(--aqua-color);
+  position: relative;
+  letter-spacing: 0.1rem;
+  z-index: 1;
+}
+button.btn5:hover {
+  color: var(--aqua-color);
+  text-shadow: 0 0 3px var(--aqua-color);
+  transition: all 0.35s ease-out;
+  letter-spacing: 0.4rem;
+}
